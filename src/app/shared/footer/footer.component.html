@@ -1,0 +1,77 @@
+<div class="container fixed-bottom colorBody1 animate__animated animate__fadeInUpBig">
+  <div class="container text-center colorNavbar2">
+
+    <button (click)="privacidad()" type="button" class="btn btn-warning btn-sm cookies8 mt-n1">
+      <u>Politica de privacidad y cookies </u>
+    </button>
+
+    <div class="row">
+      <div class="col">
+
+        <a (click)="whatsApp()" class="cursor7">
+          <i class="fab fa-whatsapp mr-3 ml-3"></i>
+        </a>
+        <a href="https://telegram.org" target="_blank">
+          <i class="fab fa-telegram-plane mr-3"></i>
+         </a>
+        <a href="https://www.facebook.com" target="_blank">
+          <i class="fab fa-facebook mr-3"></i>
+        </a>
+        <a href="mailto:email@email.es" target="_blank">
+          <i class="fas fa-envelope mr-3"></i>
+        </a>
+        <a href="https://www.linkedin.com/" target="_blank">
+          <i class="fab fa-linkedin-in mr-3"></i>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+          <i class="fab fa-instagram mr-3"></i>
+        </a>
+        <a href="https://www.twitter.com/" target="_blank">
+          <i class="fab fa-twitter mr-3"></i>
+        </a>
+      </div>
+    </div>
+    <p class="mb-1">
+      <small class="text-muted colorName3">
+        CopyRight &copy; &nbsp;Sergio Muiños ({{year}}) &nbsp; Todos los derechos reservados
+      </small>
+    </p>
+  </div>
+</div>
+
+<!-- Modal Privaciad-->
+<div class="modal fade mt-5 py-5" id="privacidad" data-backdrop="static" tabindex="-1" role="dialog"
+  aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content colorModal11">
+      <div class="container backModal12">
+        <div class="modal-body text-center colorTexto10">
+          <h4 class="colorName3 text-uppercase mb-4">
+            <u>
+              Politica de Privacidad y Cookies
+            </u>
+          </h4>
+          <p class="font-weight-light text-justify">
+            Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el
+            texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se
+            dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un
+            libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en
+            documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la
+            creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con
+            software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.
+          </p>
+          <div class="container text-center">
+            <button *ngIf="modalService.privacidad" (click)="salir()" class="btn btn-outline-warning colorName3"
+              type="button">
+              <i class="fas fa-check"></i>
+            </button>
+            <button *ngIf="!modalService.privacidad" (click)="irAlerta()" class="btn btn-outline-warning colorName3"
+              type="button">
+              <i class="fas fa-check"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
